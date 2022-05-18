@@ -1,3 +1,20 @@
 h1 {
-    color: red;
+    color: #eb5412;
+}
+
+body {
+    background-image: linear-gradient(to left top, #eb5412, #f42259, #db2394, #9e4ac2, #0063d6);
+}
+
+.headerh2{
+    color: #f42259;
+}
+
+.profilepicture{
+    height: 500px;
+    width: 700px;
+}
+
+#qualities{
+    font-size: 150%;
 }
