@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    border: 0;
+    font-style: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
 h1 {
     color: #eb5412;
 }
@@ -10,6 +16,11 @@ body {
     color: #f42259;
 }
 
+#about-me p {
+    color: blue;
+}
+
+
 .profilepicture{
     height: 500px;
     width: 700px;
@@ -17,4 +28,20 @@ body {
 
 #qualities{
     font-size: 150%;
+}
+
+#qualities h3:hover {
+    color: blue;
+}
+
+#box:checked {
+    outline: 3px solid green;
+}
+
+#box:checked + label {
+    color: green;
+}
+
+a href:visited {
+    color: #db2394;
 }
