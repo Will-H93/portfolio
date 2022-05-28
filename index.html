@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
         <title>Will Hodgkinson</title>
     </head>
     <body>
         <Header>
             <h1>Will Hodgkinson</h1>
-            <h2>Established Junior Developer coming soon - estimated release Oct 2022!</h2>
-            <figure>
-                <img src="/images/picture.jpg" alt="picture of me at a castle">
-                <br />
-                <figcaption>
-                    This is a picture of me on a day out to a castle in Wales.
-                </figcaption>
-            </figure>
+            <h2 class="headerh2">Established Junior Developer coming soon - estimated release Oct 2022!</h2>
         </Header>
         <br />
         <nav>
-            <a href="./pages/contact.html" target="_blank">Contact Me</a>
-            <a href="./pages/projects.html" target="_blank">Projects</a>
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-button-container" for="menu-toggle">
+                <div class="menu-button"></div>
+            </label>
+            <ul class="menu">
+                <li><a href="./pages/contact.html" target="_blank">Contact Me</a></li>
+                <li><a href="./pages/projects.html" target="_blank">Projects</a></li>
+            </ul>
         </nav>
         <main>
-            <h3>About Me</h3>
-            <p>Hi I'm Will, I'm 29 and I don't go outside a lot. Would rather play games, read comics and imagine about learning how to play guitar but never actually doing it (I own the guitar though!)</p>
-            <p>I've wanted to learn to code since I was a kid, with an idea to invent a real-life Pokedex! More recently I've found a career reason to do it, being able to code just opens so many opportunities and it puts some projects back in my own hands. I've finally taken that next step and enrolled with Manchester Codes on the Software Developer FastTrack.</p>
+            <div id="about-me">
+                <h3>About Me</h3>
+                <figure>
+                    <img class="profilepicture" src="/images/picture.jpg" alt="picture of me at a castle">
+                    <br />
+                    <figcaption>
+                        This is a picture of me on a day out to a castle in Wales.
+                    </figcaption>
+                </figure>
+                <p>Hi I'm Will, I'm 29 and I don't go outside a lot. Would rather play games, read comics and imagine about learning how to play guitar but never actually doing it (I own the guitar though!)</p>
+                <p>I've wanted to learn to code since I was a kid, with an idea to invent a real-life Pokedex! More recently I've found a career reason to do it, being able to code just opens so many opportunities and it puts some projects back in my own hands. I've finally taken that next step and enrolled with Manchester Codes on the Software Developer FastTrack.</p>
+                <div>
+                    <p>I sort of still want to make the Pokedex to be honest...</p>
+                </div>
+            </div>
             <figure>
                 <img src="/images/Pokemon.jpeg" alt="Pokemon logo">
                 <br />
@@ -34,7 +49,7 @@
             <figure>
                 <img src="/images/everton.png" alt="Everton logo">
                 <br />
-                <figcaption>
+                <figcaption>ß
                     Started supporting Everton when I was 11, because my mates did. I needed better mates.
                 </figcaption>
             </figure>
@@ -46,7 +61,7 @@
                 </figcaption>
             </figure>
         </main>
-        <section>
+        <section id="qualities">
             <h3>Qualities</h3>
             <ol>
                 <li>Kind</li>
@@ -62,6 +77,17 @@
                 <li>Games</li>
             </ul>
         </section>
+        <div id="“socials”">
+            <h3>My Socials</h3>
+            /* These links are just a demo, so i've left the href blank. */
+            <p>Follow me on <a href="">Twitter</a>!</p>
+            <p>Follow me on <a href="">Instagram</a>!</p>
+            /* The below are form elements, we will get to those later on so don't worry about these just yet, we just need them for demo purposes */
+            <input type="checkbox" id="box" name="test-checkbox" checked />
+            <label for="test-checkbox">Check this box for some reason</label>
+            /* The button below is just a demo, so it doesn't do anything, we will add thedisabled attribute though, more on that below...*/
+            <button disabled>You can't press this...</button>
+          </div>
         <footer>
             <p>Created: 2022</p>
             <p>Created By: Will Hodgkinson</p>
