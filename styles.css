@@ -4,20 +4,101 @@
     font-family: 'Questrial', Arial, Helvetica, sans-serif;
     font-size: 18pt;
     font-weight: 100;
-    box-sizing: border-box;
 }
 
-h1 {
-    display: grid;
-    grid-area: span 1;
-    justify-content: center;
-    font-size: 30pt;
+body {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 10% 80% 10%;
+  padding: 0;
+  margin: 0;
+  background-color: #CADBC8;
 }
 
-nav {
+Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, #a3bdb0, #acc4b6, #b6ccbc, #c0d3c2, #cadbc8);
+  padding-bottom: 5pt;
+}
+
+Header h1 {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 25pt;
+}
+
+header nav {
+    display: flex;
+    flex-direction:column;
+}
+
+main{
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 0 100% 0;
+  grid-template-rows: repeat(3, auto);
+}
+
+main > * {
+  grid-column: 2/3;
+}
+
+#about-me {
+  grid-row: 1/2;
+}
+
+#fav {
+  grid-row: 2/3;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+
+#fav #pokemon {
+  grid-column: 1/2;
+}
+
+#fav #everton {
+  grid-column: 2/3;
+}
+
+#fav #boi {
+  grid-column: 3/4;
+}
+
+#fav #pokemon,
+#fav #everton,
+#fav #boi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu > li:hover,
+#fav #pokemon:hover,
+#fav #everton:hover,
+#fav #boi:hover {
+  background-color: #a3bdb0;
+}
+
+#qualities-hobbies {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#socials {
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: row;
+}
+
+header,
+footer {
+  grid-column: 2/3;
 }
 
 .menu {
@@ -41,10 +122,13 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-right: 8vw;
   }
 
   #menu-toggle {
-    display: none;
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
   }
   
   .menu-button,
@@ -83,19 +167,40 @@ nav {
     transform: rotate(-405deg);
   }
   
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1vw;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #fav {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+  }
+
+  #fav #everton {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  #fav #boi {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+
     .menu-button-container {
         display: flex;
     }
     .menu {
-      position: absolute;
-      top: 0;
-      margin-top: 50px;
+      position: relative;
+      margin-top: 4vw;
       left: 0;
       flex-direction: column;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
     }
     #menu-toggle ~ .menu li {
       height: 0;
@@ -105,8 +210,7 @@ nav {
       transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
     #menu-toggle:checked ~ .menu li {
-      border: 1px solid #333;
-      height: 2.5em;
+      height: 1.5em;
       padding: 0.5em;
       transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
@@ -115,18 +219,12 @@ nav {
       justify-content: center;
       margin: 0;
       padding: 0.5em 0;
-      width: 100%;
-      background-color: #222;
+      width: 50%;
     }
     .menu > li:not(:last-child) {
       border-bottom: 1px solid #444;
     }
 }
-
-body {
-    background-color: #9DB4AB;
-}
-
 
 .profilepicture{
     height: 20vw;
