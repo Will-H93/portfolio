@@ -193,6 +193,19 @@ footer {
     grid-row-start: 3;
   }
 
+  #qualities-hobbies {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+  }
+
+  #qualities-hobbies #qualities {
+    grid-area: 1/1
+  }
+
+  #qualities-hobbies #hobbies {
+    grid-area: 2/1
+  }
+
     .menu-button-container {
         display: flex;
     }
